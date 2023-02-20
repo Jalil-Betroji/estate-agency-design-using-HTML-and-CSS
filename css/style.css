@@ -595,3 +595,9 @@ select {
   grid-template-columns: repeat(12, 1fr);
   gap: 3rem;
 }
+
+.error {
+  width: 10rem;
+  color: red;
+  margin: 0;
+}

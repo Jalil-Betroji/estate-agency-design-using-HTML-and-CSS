@@ -657,7 +657,8 @@
                                     </h4>
                                     <div class="form-input">
                                         <span><i class="fa fa-envelope-o"></i></span>
-                                        <input type="email" name="" placeholder="Email Address" tabindex="10" required>
+                                        <input type="email" name="" class="email_Validation" placeholder="Email Address"
+                                            tabindex="10" required>
                                     </div>
                                     <div class="form-input">
                                         <span><i class="fa fa-key"></i></span>
@@ -709,59 +710,95 @@
                                     Create an account
                                 </h4>
 
-                                <div class="d-flex flex-wrap gap-3">
+                                <div class="d-flex flex-wrap gap-2">
                                     <figure class="img-left d-none d-md-flex">
                                         <img src="img/signup.jpg" alt="">
                                     </figure>
                                     <form class="px-3">
-
+                                        <div class="d-flex justify-content-around">
+                                            <p id="First_name_error" class="error"></p>
+                                            <p id="Last_name_error" class="error"></p>
+                                        </div>
                                         <div class="form-input">
                                             <span><i class="fa-solid fa-user"></i></span>
-                                            <input type="text" name="" placeholder="First Name" tabindex="10" required>
+                                            <input type="text" name="" id="fname_validation" placeholder="First Name"
+                                                tabindex="10" required>
+
 
                                             <span><i class="fa-solid fa-user"></i></span>
-                                            <input type="text" name="" placeholder="Last Name" tabindex="10" required>
+                                            <input type="text" name="" id="lname_validation" placeholder="Last Name"
+                                                tabindex="10" required>
+                                        </div>
+                                        <div class="d-flex justify-content-around">
+                                            <p id="email_error" class="error"></p>
+                                            <p id="phone_error" class="error"></p>
                                         </div>
                                         <div class="form-input">
                                             <span><i class="fa fa-envelope-o"></i></span>
-                                            <input type="email" name="" placeholder="Email Address" tabindex="10"
-                                                required>
+                                            <input type="email" name="" id="email_Validation"
+                                                placeholder="Email Address" tabindex="10" required>
 
                                             <span><i class="fa-solid fa-phone-volume"></i></span>
-                                            <input type="number" name="" placeholder="Phone Number" tabindex="10"
-                                                required>
+                                            <input type="number" name="" id="phone_Validation"
+                                                placeholder="Phone Number" tabindex="10" required>
+                                        </div>
+                                        <div class="d-flex justify-content-around">
+                                            <p id="CIN_error" class="error"></p>
+                                            <p id="Country_error" class="error"></p>
                                         </div>
                                         <div class="form-input">
                                             <span><i class="fa-solid fa-address-card"></i></span>
-                                            <input type="text" name="" placeholder="CIN" tabindex="10" required>
+                                            <input type="text" name="" id="cin_Validation" placeholder="CIN"
+                                                tabindex="10" required>
 
                                             <span><i class="fa-solid fa-earth-americas"></i></span>
-                                            <input type="text" name="" placeholder="Country" tabindex="10" required>
+                                            <input type="text" name="" id="country_Validation" placeholder="Country"
+                                                tabindex="10" required>
+                                        </div>
+                                        <div class="d-flex justify-content-around">
+                                            <p id="city_error" class="error"></p>
+                                            <p id="address_error" class="error"></p>
                                         </div>
                                         <div class="form-input">
                                             <span><i class="fa-solid fa-city"></i></span>
-                                            <input type="text" name="" placeholder="City" tabindex="10" required>
+                                            <input type="text" name="" id="city_Validation" placeholder="City"
+                                                tabindex="10" required>
 
                                             <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                                            <input type="text" name="" placeholder="Address" tabindex="10" required>
+                                            <input type="text" name="" id="address_Validation" placeholder="Address"
+                                                tabindex="10" required>
                                         </div>
+                                        <div class="d-flex justify-content-around">
+                                            <p id="password_error" class="error"></p>
+                                            <p id="re_password_error" class="error"></p>
+                                        </div>
+                                        <p id="passwords_compare"></p>
                                         <div class="form-input">
                                             <span><i class="fa fa-key"></i></span>
-                                            <input type="password" name="" placeholder="Password" required>
+                                            <input type="password" name="" id="password_Validation"
+                                                placeholder="Password" required>
 
                                             <span><i class="fa fa-key"></i></span>
-                                            <input type="password" name="" placeholder="Rewrite Password" required>
+                                            <input type="password" name="" id="re_password_Validation"
+                                                placeholder="Rewrite Password" required>
+                                        </div>
+                                        <div class="d-flex justify-content-around">
+                                            <p id="postal_error" class="error"></p>
+                                            <p id="type_error" class="error"></p>
                                         </div>
                                         <div class="form-input">
                                             <span><i class="fa-solid fa-envelopes-bulk"></i></span>
-                                            <input type="text" name="" placeholder="Code Postal" required>
-                                            <select>
-                                                <option selected>Account Type</option>
-                                                <option value="Seller">Seller</option>
-                                                <option value="Company">Company</option>
+                                            <input type="text" name="" id="postal_Validation" placeholder="Code Postal"
+                                                required>
+                                            <select class="type_Validation">
+                                                <option class="type_Validation" value="Account Type" selected>Account
+                                                    Type</option>
+                                                <option class="type_Validation" value="Seller">Seller</option>
+                                                <option class="type_Validation" value="Company">Company</option>
                                             </select>
                                         </div>
-                                        <button type="button" class="btn btn-primary w-100">Sign Up</button>
+                                        <p id="signup_error" class="error"></p>
+                                        <button type="button" id="signUp" class="btn btn-primary w-100">Sign Up</button>
 
 
                                         <div class="text-center mb-2">
@@ -883,7 +920,7 @@
                     <h5 class="text-white mb-4">Newsletter</h5>
                     <p>Subscribe to our Newsletter to get in touch with every new announce.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5 email_Validation" type="text"
                             placeholder="Your email">
                         <button type="button"
                             class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
